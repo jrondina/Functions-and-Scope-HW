@@ -1,5 +1,3 @@
-package com.homework;
-
 /**
  * Functions and Scope Homework
  * Created by charlie on 6/21/16.
@@ -70,7 +68,7 @@ public class Main {
         // update the value of mStoreName, then explain in a comment why you can access that variable
         // from within the scope of this method, since mStoreName is NOT local to this method.
 
-        mStoreName = name;
+        mStoreName = name; //public so other methods have access
     }
 
 
@@ -85,7 +83,7 @@ public class Main {
      */
     public static String greetCustomer(String customerName) {
         // do some concatenation and return the result
-        return "Greetings" + customerName;
+        return "Hi " + customerName + ", welcome to " + mStoreName;
 
     }
 
@@ -100,7 +98,7 @@ public class Main {
      */
     public static double getSalePrice(double fullPrice, double discount) {
         // do some math and return the sale price
-        return fullPrice - (fullPrice * discount);
+        return Math.round(fullPrice - (fullPrice * discount));
     }
 
 
